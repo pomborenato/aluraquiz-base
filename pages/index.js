@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-       lskdnlsdkfnsjkdfn
+       
        <Widget>
        <Widget.Header>
               <h1>Quis do Chavinho</h1>
