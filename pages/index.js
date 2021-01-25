@@ -31,7 +31,7 @@ export default function Home() {
        
        <Widget>
        <Widget.Header>
-              <h1>Quis do Chavinho</h1>
+              <h1>Quiz do Chavinho</h1>
             </Widget.Header>
           <Widget.Content>
          
@@ -41,7 +41,7 @@ export default function Home() {
 
        <Widget>
           <Widget.Content>
-            <h1>Quis do Chavinho</h1>
+            <h1>Quiz do Chavinho</h1>
             <p>sdfsdf</p>
           </Widget.Content>
        </Widget>
