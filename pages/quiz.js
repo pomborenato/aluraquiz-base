@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
-import { useRouter } from 'next/router';
+import Button from '../src/components/Button';
+import Input from '../src/components/Input';
 
 export const QuizContainer = styled.div`
     width: 100%;
@@ -16,32 +18,6 @@ export const QuizContainer = styled.div`
       margin:auto;
       padding: 15px;
     }
-`;
-
-
-export const InputName = styled.div`
-    position: relative;
-    left: 0;
-    right: 9.71%;
-    top: 40.54%;
-    bottom: 41.44%;
-`;
-
-export const ButtonEnviar = styled.div`
-  position: relative;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-
-  background: #FF5722;
-  /* 1 dp */
-
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 4px;
-
-  
-   
 `;
 
 export default function Home() {
@@ -56,20 +32,16 @@ export default function Home() {
             <h1>Pergunta 1 de 5</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function(infosDoEvento) {
+            <form onSubmit={function (infosDoEvento) {
               infosDoEvento.preventDefault();
-              
+
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <span>Teste os seus conhecimentos sobre o universodo Chaves e divirta-se</span>
-              <InputName>
-                
-                
-              </InputName>
-              <ButtonEnviar>
-                <button type="submit" >Salvar</button>
-              </ButtonEnviar>
+
+              <Button type="submit">
+                Salvar
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
