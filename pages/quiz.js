@@ -53,7 +53,7 @@ export default function Home() {
       <QuizContainer>
         <Widget>
           <Widget.Header>
-            <h1>Quiz do Chavinho</h1>
+            <h1>Pergunta 1 de 5</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={function(infosDoEvento) {
@@ -65,22 +65,12 @@ export default function Home() {
               <span>Teste os seus conhecimentos sobre o universodo Chaves e divirta-se</span>
               <InputName>
                 
-                <input placeholder="Informe um nome" id="name" onChange={function (infosDoEvento) {
-                  setName(infosDoEvento.target.value);
-                }}
-                />
+                
               </InputName>
               <ButtonEnviar>
-                <button type="submit" disabled={name.length === 0}>Jogar {name}</button>
+                <button type="submit" >Salvar</button>
               </ButtonEnviar>
             </form>
-          </Widget.Content>
-        </Widget>
-
-        <Widget>
-          <Widget.Content>
-            <h1>Quiz do Chavinho</h1>
-            <p>sdfsdf</p>
           </Widget.Content>
         </Widget>
         <Footer />
