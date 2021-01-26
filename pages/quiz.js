@@ -20,6 +20,11 @@ export const QuizContainer = styled.div`
     }
 `;
 
+const ButtonGroup = ({ children }) => {
+  return <span className="btn-group">{children}</span>;
+};
+
+
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
@@ -32,13 +37,15 @@ export default function Home() {
             <h1>Pergunta 1 de 5</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function (infosDoEvento) {
-              infosDoEvento.preventDefault();
-
-              router.push(`/quiz?name=${name}`);
-            }}
-            >
-
+            <form onSubmit=''>
+            <p>Onde mora o Chaves?</p>
+            <ButtonGroup>
+              <Button>No Barril</Button>
+              <Button>No 71</Button>
+              <Button>No Pátio</Button>
+              <Button>No 8</Button>
+            </ButtonGroup>
+              
               <Button type="submit">
                 Salvar
               </Button>
